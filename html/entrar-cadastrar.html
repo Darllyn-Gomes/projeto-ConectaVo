@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar ou Cadastrar - Conecta Vó</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <style>
+        .oculto {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container-cabecalho">
+            <div class="logo">
+                <img src="caminho/para/o/seu/logo.png" alt="Logo Conecta Vó">
+            </div>
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="aulas.html">Aula</a></li>
+                    <li><a href="ajuda.html">Ajuda</a></li>
+                </ul>
+            </nav>
+            <div class="botoes-cabecalho">
+                <a href="voluntario.html"><button class="botao-voluntario">Seja Voluntário</button></a>
+                <a href="entrar-cadastrar.html"><button class="botao-login">Entrar / Cadastrar</button></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-principal">
+        <section class="secao-formulario" id="secao-login-cadastro">
+
+            <div id="formulario-login-container">
+                <h2>Acesse sua conta</h2>
+                <p>Faça login para acompanhar seu progresso nas aulas e ganhar medalhas!</p>
+                
+                <form id="formulario-login">
+                    <div class="campo-form">
+                        <label for="email-login">E-mail:</label>
+                        <input type="email" id="email-login" name="email" placeholder="seu-email@exemplo.com" required>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="senha-login">Senha:</label>
+                        <input type="password" id="senha-login" name="senha" required>
+                    </div>
+                    
+                    <button type="submit" class="botao-enviar">Entrar</button>
+                </form>
+
+                <p class="link-cadastro">Ainda não tem conta? <a href="#" id="link-cadastro">Cadastre-se aqui</a></p>
+            </div>
+
+            <div id="formulario-cadastro-container" class="oculto">
+                <h2>Crie sua conta</h2>
+                <p>É rápido e fácil. Preencha os campos abaixo.</p>
+                
+                <form id="formulario-cadastro">
+                    <div class="campo-form">
+                        <label for="nome-cadastro">Nome Completo:</label>
+                        <input type="text" id="nome-cadastro" name="nome" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="email-cadastro">E-mail:</label>
+                        <input type="email" id="email-cadastro" name="email" placeholder="seu-email@exemplo.com" required>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="senha-cadastro">Crie uma Senha:</label>
+                        <input type="password" id="senha-cadastro" name="senha" required>
+                    </div>
+                    
+                    <button type="submit" class="botao-enviar">Cadastrar</button>
+                </form>
+
+                <p class="link-cadastro">Já tem conta? <a href="#" id="link-login">Acesse sua conta aqui</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginFormContainer = document.getElementById('formulario-login-container');
+            const cadastroFormContainer = document.getElementById('formulario-cadastro-container');
+            const linkCadastro = document.getElementById('link-cadastro');
+            const linkLogin = document.getElementById('link-login');
+
+            if (linkCadastro && linkLogin) {
+                linkCadastro.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    loginFormContainer.classList.add('oculto');
+                    cadastroFormContainer.classList.remove('oculto');
+                });
+
+                linkLogin.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    cadastroFormContainer.classList.add('oculto');
+                    loginFormContainer.classList.remove('oculto');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

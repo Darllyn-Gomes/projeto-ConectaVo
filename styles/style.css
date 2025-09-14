@@ -278,3 +278,98 @@ footer {
     .secao-atalhos .atalho { width: 100%; }
     .secao-historias .historia { width: 100%; }
 }
+
+/* Estilos Específicos para a Página de Cadastro */
+.container-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Altura mínima para centralizar */
+}
+
+.secao-formulario {
+    background-color: var(--cor-card-fundo);
+    padding: 2.5rem;
+    border-radius: var(--borda-arredondada);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+
+.secao-formulario h2 {
+    text-align: center;
+    color: var(--cor-principal);
+    margin-bottom: 0.5rem;
+}
+
+.secao-formulario p {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.campo-form {
+    margin-bottom: 1.5rem;
+}
+
+.campo-form label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--cor-principal);
+}
+
+.campo-form input,
+.campo-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: var(--borda-arredondada);
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+}
+
+.botao-enviar {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--borda-arredondada);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-enviar:hover {
+    background-color: #FFC107;
+}
+
+/* Garante que o botão de login no cabeçalho leve para a nova página */
+.botao-login {
+    background-color: var(--cor-card-fundo);
+    color: var(--cor-principal);
+    margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+    .secao-formulario {
+        padding: 1.5rem;
+        margin: 2rem 1rem;
+    }
+}
+
+/* Classes para alternar formulários */
+.oculto {
+    display: none;
+}
