@@ -373,3 +373,115 @@ footer {
 .oculto {
     display: none;
 }
+
+/* Estilos Específicos para a Página de Voluntário */
+.secao-voluntario {
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--cor-card-fundo);
+    border-radius: var(--borda-arredondada);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.secao-voluntario h2 {
+    text-align: center;
+    color: var(--cor-principal);
+    margin-bottom: 0.5rem;
+}
+
+.secao-voluntario p {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.campo-form {
+    margin-bottom: 1.5rem;
+}
+
+.campo-form label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--cor-principal);
+}
+
+.campo-form input,
+.campo-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: var(--borda-arredondada);
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+}
+
+.campo-form-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.campo-form-checkbox input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.botao-enviar {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--borda-arredondada);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-enviar:hover {
+    background-color: #FFC107;
+}
+
+@media (max-width: 768px) {
+    .secao-voluntario {
+        padding: 1.5rem;
+    }
+}
+
+/* Estilos para o campo Select */
+.campo-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: var(--borda-arredondada);
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-card-fundo); /* Adiciona fundo branco para consistência */
+    cursor: pointer;
+}
+
+.campo-form select:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+}
+
+/* Garante que o campo de texto de múltiplas linhas (textarea) também tenha o mesmo estilo */
+.campo-form textarea {
+    resize: vertical; /* Permite que o usuário redimensione verticalmente */
+}
+
+.campo-form textarea:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+}
