@@ -33,10 +33,8 @@ body {
 header {
     background-color: var(--cor-principal);
     color: var(--cor-card-fundo);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1.5rem 2rem; /* Aumentado o padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .container-cabecalho {
@@ -49,7 +47,7 @@ header {
 }
 
 .logo img {
-    height: 50px; /* Ajuste o tamanho do logo */
+    height: 40px; 
 }
 
 .menu-principal ul {
@@ -61,38 +59,59 @@ header {
 .menu-principal a {
     color: var(--cor-card-fundo);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
+    padding: 0.5rem; /* Adicionado padding para facilitar o clique */
+    transition: color 0.3s;
+}
+
+.menu-principal a:hover {
+    color: var(--cor-secundaria);
+}
+
+.botoes-cabecalho a {
+    text-decoration: none;
 }
 
 .botoes-cabecalho button {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem; /* Aumentado o tamanho dos botões */
     border-radius: var(--borda-arredondada);
     border: 2px solid var(--cor-card-fundo);
     font-weight: 600;
     cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .botao-voluntario {
     background-color: transparent;
     color: var(--cor-card-fundo);
 }
+.botao-voluntario:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    border-color: var(--cor-secundaria);
+}
 
 .botao-login {
     background-color: var(--cor-card-fundo);
     color: var(--cor-principal);
-    margin-left: 10px;
+    margin-left: 1rem;
+}
+.botao-login:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
 }
 
 /* Estilos Gerais de Conteúdo */
 main {
-    padding: 2rem;
+    padding: 3rem 2rem; /* Padding maior para o conteúdo */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem; /* Maior espaçamento entre as seções */
     text-align: center;
 }
 
@@ -102,52 +121,102 @@ h1, h2, h3 {
     color: var(--cor-principal);
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.8rem; }
+p { font-size: 1.1rem; }
+
+/* Seção de Slogan/Banner */
+.secao-slogan {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 5rem 2rem;
+    border-radius: var(--borda-arredondada);
+    text-align: center;
+    background-image: url('caminho/para/o/banner.png'); /* Adicione sua imagem aqui */
+    background-size: cover;
+    background-position: center;
+}
+.secao-slogan h1 { color: white; }
+.secao-slogan p { color: white; margin-bottom: 2rem; }
+
+.botao-quero-aprender {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+.botao-quero-aprender:hover {
+    transform: translateY(-3px);
+}
 
 /* Estilos para a Seção de Atalhos */
+.secao-atalhos {
+    padding: 2rem 0;
+}
 .container-atalhos {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
 }
-
+.atalho-link {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
 .atalho {
     background-color: var(--cor-card-fundo);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: var(--borda-arredondada);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-
+.atalho:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
 .atalho img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
 }
-
+.atalho h3 { color: var(--cor-principal); }
 .botao-comecar {
     background-color: var(--cor-secundaria);
     color: var(--cor-texto);
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.8rem 1.8rem;
     border-radius: var(--borda-arredondada);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+.botao-comecar:hover {
+    background-color: #FFC107;
 }
 
 /* Estilos para a Seção de Histórias de Sucesso */
+.secao-historias {
+    background-color: #f1f1f1;
+    padding: 4rem 2rem;
+    border-radius: var(--borda-arredondada);
+}
 .container-historias {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
 }
-
 .historia {
     background-color: var(--cor-card-fundo);
     padding: 2rem;
@@ -155,14 +224,21 @@ h3 { font-size: 1.5rem; }
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 280px;
     text-align: center;
+    font-style: italic;
 }
-
 .foto-placeholder {
     width: 100px;
     height: 100px;
-    background-color: #ddd;
+    background-color: var(--cor-principal);
     border-radius: 50%;
     margin: 0 auto 1rem;
+}
+.historia h3 {
+    margin-bottom: 0.5rem;
+}
+.historia p {
+    font-size: 1rem;
+    color: #555;
 }
 
 /* Estilos do Rodapé */
@@ -170,7 +246,8 @@ footer {
     background-color: var(--cor-principal);
     color: var(--cor-card-fundo);
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+    font-size: 0.9rem;
 }
 
 /* Design Responsivo para Telas Pequenas */
@@ -179,28 +256,25 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-
     .menu-principal ul {
         flex-direction: column;
         gap: 0.5rem;
         margin: 1rem 0;
     }
-
     .botoes-cabecalho {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        width: 100%;
     }
-
+    .botoes-cabecalho button {
+        width: 100%;
+        margin-left: 0;
+    }
     h1 { font-size: 2rem; }
     h2 { font-size: 1.5rem; }
     h3 { font-size: 1.25rem; }
-
-    .secao-atalhos .atalho {
-        width: 100%;
-    }
-
-    .secao-historias .historia {
-        width: 100%;
-    }
+    .secao-slogan { padding: 3rem 1rem; }
+    .secao-atalhos .atalho { width: 100%; }
+    .secao-historias .historia { width: 100%; }
 }
