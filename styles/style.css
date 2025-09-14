@@ -1,0 +1,206 @@
+/* Importação da fonte para o site */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Regras de Acessibilidade e Design */
+:root {
+    --cor-principal: #008080; /* Um tom de verde-água */
+    --cor-secundaria: #FFD700; /* Dourado */
+    --cor-fundo: #F5F5F5; /* Cinza claro */
+    --cor-texto: #333; /* Cinza escuro */
+    --cor-card-fundo: #FFFFFF; /* Branco */
+    --fonte-principal: 'Poppins', sans-serif;
+    --borda-arredondada: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-card-fundo);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-cabecalho {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Ajuste o tamanho do logo */
+}
+
+.menu-principal ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu-principal a {
+    color: var(--cor-card-fundo);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.botoes-cabecalho button {
+    padding: 0.5rem 1rem;
+    border-radius: var(--borda-arredondada);
+    border: 2px solid var(--cor-card-fundo);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botao-voluntario {
+    background-color: transparent;
+    color: var(--cor-card-fundo);
+}
+
+.botao-login {
+    background-color: var(--cor-card-fundo);
+    color: var(--cor-principal);
+    margin-left: 10px;
+}
+
+/* Estilos Gerais de Conteúdo */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--cor-principal);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+/* Estilos para a Seção de Atalhos */
+.container-atalhos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.atalho {
+    background-color: var(--cor-card-fundo);
+    padding: 2rem;
+    border-radius: var(--borda-arredondada);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.atalho img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.botao-comecar {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--borda-arredondada);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Estilos para a Seção de Histórias de Sucesso */
+.container-historias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.historia {
+    background-color: var(--cor-card-fundo);
+    padding: 2rem;
+    border-radius: var(--borda-arredondada);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+}
+
+.foto-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
+/* Estilos do Rodapé */
+footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-card-fundo);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Design Responsivo para Telas Pequenas */
+@media (max-width: 768px) {
+    .container-cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-principal ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .botoes-cabecalho {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+
+    .secao-atalhos .atalho {
+        width: 100%;
+    }
+
+    .secao-historias .historia {
+        width: 100%;
+    }
+}
