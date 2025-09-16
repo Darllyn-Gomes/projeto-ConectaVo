@@ -1,42 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajuda - Conecta Vó</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajuda - Conecta Vó</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonte personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    <header>
-        <div class="container-cabecalho">
-            <div class="logo">
-                <img src="../caminho/para/o/seu/logo.png" alt="Logo Conecta Vó">
-            </div>
-            <nav class="menu-principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="aulas.html">Aula</a></li>
-                    <li><a href="ajuda.html">Ajuda</a></li>
-                </ul>
-            </nav>
-            <div class="botoes-cabecalho">
-                <a href="voluntario.html"><button class="botao-voluntario">Seja Voluntário</button></a>
-                <a href="entrar-cadastrar.html"><button class="botao-login">Entrar / Cadastrar</button></a>
-            </div>
+
+  <!-- Cabeçalho -->
+  <header class="bg-teal text-white py-3 shadow">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div class="logo">
+        <img src="../caminho/para/o/seu/logo.png" alt="Logo Conecta Vó" height="40">
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="aulas.html">Aula</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </nav>
+      <div class="d-flex gap-2">
+        <a href="voluntario.html"><button class="btn btn-outline-light">Seja Voluntário</button></a>
+        <a href="entrar-cadastrar.html"><button class="btn btn-light text-teal">Entrar / Cadastrar</button></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container py-5">
+    <section class="text-center mb-5">
+      <h1 class="text-teal">Ajuda e Suporte</h1>
+      <p class="lead">Encontre respostas para suas dúvidas e entre em contato com nosso time de voluntários.</p>
+    </section>
+
+    <!-- Exemplo de perguntas frequentes -->
+    <section class="accordion" id="faqAjuda">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#resposta1" aria-expanded="true" aria-controls="resposta1">
+            Como faço login na minha conta?
+          </button>
+        </h2>
+        <div id="resposta1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAjuda">
+          <div class="accordion-body">
+            Vá até a página <strong>Entrar / Cadastrar</strong>, insira seu e-mail e senha, e clique em "Entrar".
+          </div>
         </div>
-    </header>
+      </div>
 
-    <main class="container-principal">
-        <section class="secao-ajuda">
-            <h1>Ajuda e Suporte</h1>
-            <p>Encontre respostas para suas dúvidas e entre em contato com nosso time de voluntários.</p>
-            </section>
-    </main>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#resposta2" aria-expanded="false" aria-controls="resposta2">
+            Como ganho pontos Conecta?
+          </button>
+        </h2>
+        <div id="resposta2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAjuda">
+          <div class="accordion-body">
+            Ao concluir aulas, você ganha pontos automaticamente. Basta clicar no botão "Finalizar Lição" ao final de cada aula.
+          </div>
+        </div>
+      </div>
 
-    <footer>
-        <p>Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
-    </footer>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#resposta3" aria-expanded="false" aria-controls="resposta3">
+            Como posso falar com um voluntário?
+          </button>
+        </h2>
+        <div id="resposta3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAjuda">
+          <div class="accordion-body">
+            Acesse a página <strong>Seja Voluntário</strong> e preencha o formulário. Nossa equipe entrará em contato com você.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <!-- Rodapé -->
+  <footer class="bg-teal text-white text-center py-3 mt-5">
+    <p>Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

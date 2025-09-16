@@ -20,7 +20,99 @@
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="aulas.html">Aula</a></li>
                     <li><a href="ajuda.html">Ajuda</a></li>
-                </ul>
+                </ul><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início - Conecta Vó</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonte personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="bg-teal text-white py-3 shadow">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div class="logo">
+        <img src="caminho/para/o/seu/logo.png" alt="Logo Conecta Vó" height="40">
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="aulas.html">Aula</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </nav>
+      <div class="d-flex gap-2">
+        <a href="voluntario.html"><button class="btn btn-outline-light">Seja Voluntário</button></a>
+        <a href="entrar-cadastrar.html"><button class="btn btn-light text-teal">Entrar / Cadastrar</button></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container py-5">
+    <section class="text-center mb-5">
+      <h1>Bem-vindo ao Conecta Vó!</h1>
+      <p>O jeito mais simples e divertido de aprender tecnologia e se conectar com o mundo.</p>
+      <a href="aulas.html"><button class="btn btn-warning">Começar a Aprender</button></a>
+    </section>
+
+    <!-- Cards -->
+    <section class="row text-center mb-5">
+      <div class="col-md-4 mb-4">
+        <div class="card p-4 shadow-sm">
+          <img src="caminho/para/o/seu/icone-computador.png" class="mx-auto mb-3" width="100" alt="Ícone Aulas">
+          <h3>Aulas Completas</h3>
+          <p>Conteúdo feito para você, do básico ao avançado.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-4 shadow-sm">
+          <img src="caminho/para/o/seu/icone-medalha.png" class="mx-auto mb-3" width="100" alt="Ícone Pontos">
+          <h3>Pontos e Recompensas</h3>
+          <p>Ganhe pontos por cada aula e desbloqueie títulos de conquista.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-4 shadow-sm">
+          <img src="caminho/para/o/seu/icone-voluntario.png" class="mx-auto mb-3" width="100" alt="Ícone Voluntário">
+          <h3>Apoio de Voluntários</h3>
+          <p>Sempre terá alguém pronto para te ajudar a qualquer momento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pontuação e conquistas -->
+    <section class="text-center">
+      <h2>Minhas Conquistas</h2>
+      <p>Você tem <span id="pontos-conecta">0</span> Pontos Conecta!</p>
+      <ul id="lista-titulos" class="list-group mt-3"></ul>
+      <button class="btn btn-success mt-3" onclick="addPontos(100)">Ganhar 100 Pontos</button>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-teal text-white text-center py-3">
+    <p>Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Seu JS -->
+  <script src="js/pontos.js"></script>
+</body>
+</html>
             </nav>
             <div class="botoes-cabecalho">
                 <a href="voluntario.html"><button class="botao-voluntario">Seja Voluntário</button></a>

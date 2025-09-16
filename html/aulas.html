@@ -1,42 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aulas - Conecta Vó</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aulas - Conecta Vó</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonte personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    <header>
-        <div class="container-cabecalho">
-            <div class="logo">
-                <img src="../caminho/para/o/seu/logo.png" alt="Logo Conecta Vó">
-            </div>
-            <nav class="menu-principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="aulas.html">Aula</a></li>
-                    <li><a href="ajuda.html">Ajuda</a></li>
-                </ul>
-            </nav>
-            <div class="botoes-cabecalho">
-                <a href="voluntario.html"><button class="botao-voluntario">Seja Voluntário</button></a>
-                <a href="entrar-cadastrar.html"><button class="botao-login">Entrar / Cadastrar</button></a>
-            </div>
+
+  <!-- Cabeçalho -->
+  <header class="bg-teal text-white py-3 shadow">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div class="logo">
+        <img src="../caminho/para/o/seu/logo.png" alt="Logo Conecta Vó" height="40">
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="aulas.html">Aula</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </nav>
+      <div class="d-flex gap-2">
+        <a href="voluntario.html"><button class="btn btn-outline-light">Seja Voluntário</button></a>
+        <a href="entrar-cadastrar.html"><button class="btn btn-light text-teal">Entrar / Cadastrar</button></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container py-5">
+    <section class="text-center mb-5">
+      <h1 class="text-teal">Nossas Aulas</h1>
+      <p class="lead">Escolha um tema para começar a aprender e se divertir!</p>
+    </section>
+
+    <!-- Exemplo de blocos de aula -->
+    <section class="row text-center">
+      <div class="col-md-3 mb-4">
+        <div class="card p-3 shadow-sm">
+          <img src="../caminho/para/o/icone1.png" class="mx-auto mb-3" width="80" alt="Ícone Conecte-se">
+          <h5>Conecte-se com quem ama</h5>
+          <a href="aulas-conecte.html" class="btn btn-warning mt-2">Começar</a>
         </div>
-    </header>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card p-3 shadow-sm">
+          <img src="../caminho/para/o/icone2.png" class="mx-auto mb-3" width="80" alt="Ícone Redes Sociais">
+          <h5>Use redes sociais</h5>
+          <a href="aulas-redes.html" class="btn btn-warning mt-2">Começar</a>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card p-3 shadow-sm">
+          <img src="../caminho/para/o/icone3.png" class="mx-auto mb-3" width="80" alt="Ícone Compras Online">
+          <h5>Compre online com segurança</h5>
+          <a href="aulas-compras.html" class="btn btn-warning mt-2">Começar</a>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card p-3 shadow-sm">
+          <img src="../caminho/para/o/icone4.png" class="mx-auto mb-3" width="80" alt="Ícone Conquistas">
+          <h5>Minhas Conquistas</h5>
+          <a href="conquistas.html" class="btn btn-outline-primary mt-2">Ver Pontos</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <main class="container-principal">
-        <section class="secao-aulas">
-            <h1>Nossas Aulas</h1>
-            <p>Escolha um tema para começar a aprender e se divertir!</p>
-            </section>
-    </main>
+  <!-- Rodapé -->
+  <footer class="bg-teal text-white text-center py-3">
+    <p>Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
+  </footer>
 
-    <footer>
-        <p>Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
-    </footer>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

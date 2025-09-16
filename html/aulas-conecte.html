@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videochamada - Conecta Vó</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videochamada - Conecta Vó</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonte personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
 
-    <header>
-        <div class="container-cabecalho">
-            <div class="logo">
-                <img src="../caminho/para/o/seu/logo.png" alt="Logo Conecta Vó">
-            </div>
-            <nav class="menu-principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="aulas.html">Aula</a></li>
-                    <li><a href="ajuda.html">Ajuda</a></li>
-                </ul>
-            </nav>
-            <div class="botoes-cabecalho">
-                <a href="voluntario.html"><button class="botao-voluntario">Seja Voluntário</button></a>
-                <a href="entrar-cadastrar.html"><button class="botao-login">Entrar / Cadastrar</button></a>
-            </div>
-        </div>
-    </header>
+  <!-- Cabeçalho -->
+  <header class="bg-teal text-white py-3 shadow">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div class="logo">
+        <img src="../caminho/para/o/seu/logo.png" alt="Logo Conecta Vó" height="40">
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="aulas.html">Aula</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </nav>
+      <div class="d-flex gap-2">
+        <a href="voluntario.html"><button class="btn btn-outline-light">Seja Voluntário</button></a>
+        <a href="entrar-cadastrar.html"><button class="btn btn-light text-teal">Entrar / Cadastrar</button></a>
+      </div>
+    </div>
+  </header>
 
-    <main class="container-principal">
-        <section class="secao-aula-detalhe">
-            <h1>Como fazer uma Videochamada</h1>
-            <p>Aprenda a se conectar com seus amigos e familiares de um jeito simples e rápido!</p>
-            
-            <div class="video-aula">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-            </div>
+  <!-- Conteúdo principal -->
+  <main class="container py-5">
+    <section class="text-center">
+      <h1 class="text-teal mb-3">Como fazer uma Videochamada</h1>
+      <p class="lead mb-4">Aprenda a se conectar com seus amigos e familiares de um jeito simples e rápido!</p>
 
-            <div class="container-botao-finalizar">
-                <button onclick="addPontos(100)" class="botao-finalizar">Finalizar Lição e Ganhar Pontos!</button>
-            </div>
-        </section>
-    </main>
+      <div class="ratio ratio-16x9 mb-4">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Videochamada" allowfullscreen></iframe>
+      </div>
 
-    <footer>
-        <p>Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
-    </footer>
+      <button onclick="addPontos(100)" class="btn btn-success fw-semibold">Finalizar Lição e Ganhar Pontos!</button>
+    </section>
+  </main>
 
-    <script src="../js/pontos.js"></script>
+  <!-- Rodapé -->
+  <footer class="bg-teal text-white text-center py-3 mt-5">
+    <p>Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
+  </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS de Pontuação -->
+  <script src="../js/pontos.js"></script>
 </body>
 </html>

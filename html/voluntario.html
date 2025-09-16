@@ -1,103 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seja Voluntário - Conecta Vó</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seja Voluntário - Conecta Vó</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonte personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Seu CSS -->
+  <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
- 
-    <header>
-        <div class="container-cabecalho">
-            <div class="logo">
-               <img src="../caminho/para/o/seu/logo.png" alt="Logo Conecta Vó">
-            </div>
-            <nav class="menu-principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="aulas.html">Aula</a></li>
-                    <li><a href="ajuda.html">Ajuda</a></li>
-                </ul>
-            </nav>
-            <div class="botoes-cabecalho">
-                <a href="voluntario.html"><button class="botao-voluntario">Seja Voluntário</button></a>
-                <a href="entrar-cadastrar.html"><button class="botao-login">Entrar / Cadastrar</button></a>
-            </div>
-        </div>
-    </header>
- 
-    <main class="container-principal">
-        <section class="secao-formulario">
-            <h2>Junte-se ao nosso time!</h2>
-            <p>Seja um voluntário e ajude a conectar a melhor idade ao mundo digital. Preencha o formulário para se inscrever.</p>
-            
-            <form id="formulario-voluntario">
-                <div class="campo-form">
-                    <label for="nome">Nome completo:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-                </div>
 
-                <div class="campo-form">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="seu-email@exemplo.com" required>
-                </div>
+  <!-- Cabeçalho -->
+  <header class="bg-teal text-white py-3 shadow">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div class="logo">
+        <img src="../caminho/para/o/seu/logo.png" alt="Logo Conecta Vó" height="40">
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="sobre.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="aulas.html">Aula</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </nav>
+      <div class="d-flex gap-2">
+        <a href="voluntario.html"><button class="btn btn-outline-light">Seja Voluntário</button></a>
+        <a href="entrar-cadastrar.html"><button class="btn btn-light text-teal">Entrar / Cadastrar</button></a>
+      </div>
+    </div>
+  </header>
 
-                <div class="campo-form">
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
-                </div>
+  <!-- Conteúdo principal -->
+  <main class="container py-5">
+    <section class="secao-voluntario bg-white p-4 rounded shadow mx-auto" style="max-width: 800px;">
+      <h2 class="text-center text-teal mb-3">Junte-se ao nosso time!</h2>
+      <p class="text-center text-muted mb-4">Seja um voluntário e ajude a conectar a melhor idade ao mundo digital. Preencha o formulário para se inscrever.</p>
 
-                <div class="campo-form">
-                    <label for="cidade">Cidade / Estado:</label>
-                    <input type="text" id="cidade" name="cidade_estado" placeholder="Ex: São Paulo / SP" required>
-                </div>
+      <form id="formulario-voluntario">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome completo:</label>
+          <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
 
-                <div class="campo-form">
-                    <label for="area">Área de atuação:</label>
-                    <select id="area" name="area_atuacao" required>
-                        <option value="" disabled selected>Selecione uma área</option>
-                        <option value="dev">Dev (JS/HTML/CSS)</option>
-                        <option value="designer">Designer</option>
-                        <option value="educador">Educador/Psicólogo</option>
-                        <option value="comunicador">Comunicador</option>
-                        <option value="outro">Outro</option>
-                    </select>
-                </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail:</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="seu-email@exemplo.com" required>
+        </div>
 
-                <div class="campo-form">
-                    <label for="projeto-social">Já participou de algum projeto social?</label>
-                    <textarea id="projeto-social" name="projeto_social" rows="2" placeholder="Conte-nos sua experiência"></textarea>
-                </div>
+        <div class="mb-3">
+          <label for="telefone" class="form-label">Telefone:</label>
+          <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
+        </div>
 
-                <div class="campo-form">
-                    <label for="motivacao">Por que gostaria de participar do Conecta Vó?</label>
-                    <textarea id="motivacao" name="motivacao" rows="4" placeholder="Sua motivação é muito importante para nós!" required></textarea>
-                </div>
+        <div class="mb-3">
+          <label for="cidade" class="form-label">Cidade / Estado:</label>
+          <input type="text" class="form-control" id="cidade" name="cidade_estado" placeholder="Ex: São Paulo / SP" required>
+        </div>
 
-                <div class="campo-form">
-                    <label for="tempo">Quanto tempo semanal pode dedicar?</label>
-                    <input type="text" id="tempo" name="tempo" placeholder="Ex: 5 horas por semana" required>
-                </div>
+        <div class="mb-3">
+          <label for="area" class="form-label">Área de atuação:</label>
+          <select class="form-select" id="area" name="area_atuacao" required>
+            <option value="" disabled selected>Selecione uma área</option>
+            <option value="dev">Dev (JS/HTML/CSS)</option>
+            <option value="designer">Designer</option>
+            <option value="educador">Educador/Psicólogo</option>
+            <option value="comunicador">Comunicador</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
 
-                <div class="campo-form">
-                    <label for="ideias">Tem alguma ideia para contribuir com o projeto?</label>
-                    <textarea id="ideias" name="ideias" rows="4" placeholder="Compartilhe suas ideias"></textarea>
-                </div>
+        <div class="mb-3">
+          <label for="projeto-social" class="form-label">Já participou de algum projeto social?</label>
+          <textarea class="form-control" id="projeto-social" name="projeto_social" rows="2" placeholder="Conte-nos sua experiência"></textarea>
+        </div>
 
-                <div class="campo-form-checkbox">
-                    <input type="checkbox" id="consentimento" name="consentimento" required>
-                    <label for="consentimento">Eu concordo com os termos de voluntariado e tratamento de dados.</label>
-                </div>
-                
-                <button type="submit" class="botao-enviar">Enviar Inscrição</button>
-            </form>
-        </section>
-    </main>
- 
-    <footer>
-        <p>Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
-    </footer>
+        <div class="mb-3">
+          <label for="motivacao" class="form-label">Por que gostaria de participar do Conecta Vó?</label>
+          <textarea class="form-control" id="motivacao" name="motivacao" rows="4" placeholder="Sua motivação é muito importante para nós!" required></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="tempo" class="form-label">Quanto tempo semanal pode dedicar?</label>
+          <input type="text" class="form-control" id="tempo" name="tempo" placeholder="Ex: 5 horas por semana" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="ideias" class="form-label">Tem alguma ideia para contribuir com o projeto?</label>
+          <textarea class="form-control" id="ideias" name="ideias" rows="4" placeholder="Compartilhe suas ideias"></textarea>
+        </div>
+
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" id="consentimento" name="consentimento" required>
+          <label class="form-check-label" for="consentimento">
+            Eu concordo com os termos de voluntariado e tratamento de dados.
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-warning w-100 fw-semibold">Enviar Inscrição</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-teal text-white text-center py-3">
+    <p>Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

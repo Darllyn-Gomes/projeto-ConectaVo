@@ -485,3 +485,12 @@ footer {
     outline: none;
     border-color: var(--cor-principal);
 }
+
+/* Estilos personalizados Bootstrap */
+.bg-teal {
+  background-color: #008080;
+}
+
+.text-teal {
+  color: #008080;
+}
