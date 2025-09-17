@@ -494,3 +494,7 @@ footer {
 .text-teal {
   color: #008080;
 }
+
+.carrossel-ajustado {
+  margin-top: -1.5rem; /* sobe o carrossel suavemente */
+}
