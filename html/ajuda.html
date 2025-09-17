@@ -1,136 +1,271 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ajuda - Conecta Vó</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conecta Vó - Ajuda</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
 
-  <!-- Fonte personalizada -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Seu CSS -->
-  <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="/styles/style.css" />
 </head>
+
 <body>
-
-  <!-- Barra superior -->
-  <div class="bg-light py-2 shadow-sm">
-    <div class="container d-flex justify-content-between align-items-center">
-      <span class="text-muted fw-semibold fs-5" style="margin-left: 1.2rem;">Tecnologia com carinho. Conectando gerações.</span>
-      <a href="entrar-cadastrar.html" class="me-4">
-        <button class="btn btn-outline-secondary btn-sm fs-6">Entrar / Cadastrar</button>
+    <header
+      class="header-container bg-light py-2 shadow-sm d-flex flex-wrap justify-content-between align-items-center"
+    >
+      <span class="text-muted fw-semibold fs-5 ms-5 d-none d-md-block"
+        >Tecnologia com carinho. Conectando gerações.</span
+      >
+      <a href="entrar-cadastrar.html" class="ms-auto me-5">
+        <button class="btn btn-outline-secondary btn-sm fs-6">
+          Entrar / Cadastrar
+        </button>
       </a>
-    </div>
-  </div>
+    </header>
 
-  <!-- Faixa principal -->
-  <div style="background-color: #18a5a7; padding: 5rem 0;" class="text-white shadow">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center">
-
-      <!-- Logo -->
-      <div class="logo">
-        <a href="index.html">
-          <img src="../assets/logo.png" alt="Logo Conecta Vó" height="80" style="cursor: pointer;">
+    <nav class="navbar-principal shadow">
+      <div
+        class="container d-flex flex-wrap justify-content-between align-items-center"
+      >
+        <a href="index.html" class="logo">
+          <img src="/assets/logo.png" alt="Logo Conecta Vó" height="80" />
         </a>
-      </div>
 
-      <!-- Menu -->
-      <nav class="flex-grow-1 d-flex justify-content-center">
-        <ul class="nav" style="font-size: 28px;">
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="sobre.html">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="aulas.html">Aula</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="ajuda.html">Ajuda</a></li>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="sobre.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="aulas.html">Aulas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="ajuda.html">Ajuda</a>
+          </li>
         </ul>
-      </nav>
 
-      <!-- Botão "Seja Voluntário" + lupa com fonte 26px -->
-      <div class="d-flex align-items-center gap-3 me-3">
-        <a href="voluntario.html">
-          <button class="btn fw-semibold" style="background-color: white; color: #18a5a7; font-size: 26px;">Seja Voluntário</button>
-        </a>
-        <i class="bi bi-search text-white" style="font-size: 26px; cursor: pointer;" onclick="toggleBusca()" title="Buscar"></i>
+        <div class="botoes-acao d-flex align-items-center gap-3 me-4">
+          <a href="voluntario.html">
+            <button class="btn-voluntario">Seja Voluntário</button>
+          </a>
+          <i
+            class="bi bi-search text-white busca-icon"
+            onclick="toggleBusca()"
+            title="Buscar"
+          ></i>
+        </div>
       </div>
+    </nav>
 
+    <div id="campoBusca" class="container mt-3" style="display: none">
+      <form class="d-flex" onsubmit="buscarConteudo(event)">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Buscar conteúdo..."
+          aria-label="Buscar"
+        />
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
     </div>
-  </div>
 
-  <!-- Campo de busca oculto -->
-  <div id="campoBusca" class="container mt-3" style="display: none;">
-    <form class="d-flex" onsubmit="buscarConteudo(event)">
-      <input class="form-control me-2" type="search" placeholder="Buscar conteúdo..." aria-label="Buscar">
-      <button class="btn btn-outline-success" type="submit">Buscar</button>
-    </form>
-  </div>
+    <main class="container py-5">
+      <section class="text-center mb-5">
+        <h1 class="text-teal main-title">Central de Ajuda</h1>
+        <p class="lead subtitle-lead">Encontre respostas para suas dúvidas e suporte para aproveitar ao máximo a nossa plataforma.</p>
+      </section>
 
-  <!-- Conteúdo principal -->
-  <main class="container py-5">
-    <section class="text-center">
-      <h1>Ajuda</h1>
-      <p class="lead">Está com dúvidas? Encontre aqui orientações para navegar e aproveitar o Conecta Vó.</p>
-    </section>
-  </main>
+      <section class="mb-5">
+        <h2 class="text-center mb-4">Perguntas Frequentes</h2>
+        <div class="accordion accordion-flush" id="faqAccordion">
+          <div class="accordion-item shadow-sm mb-3 rounded">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Como faço para criar uma conta?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Para criar sua conta, clique no botão "Entrar / Cadastrar" no canto superior direito da página e siga as instruções para o cadastro. É rápido e gratuito!
+              </div>
+            </div>
+          </div>
 
-  <!-- Rodapé -->
-  <footer class="bg-teal text-white py-5">
-  <div class="container">
-    <div class="row">
+          <div class="accordion-item shadow-sm mb-3 rounded">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                As aulas são gratuitas?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sim, todas as aulas e recursos do Conecta Vó são totalmente gratuitos. Nosso objetivo é a inclusão digital, sem custos.
+              </div>
+            </div>
+          </div>
 
-      <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-        <a href="index.html" class="d-inline-block mb-3">
-          <img src="assets/logo.png" alt="Logo Conecta Vó" height="80" />
-        </a>
-        <p class="mb-0">Tecnologia com carinho. Conectando gerações.</p>
+          <div class="accordion-item shadow-sm mb-3 rounded">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Como entro em contato com um "Neto Digital"?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Você pode solicitar a ajuda de um "Neto Digital" através do formulário de contato abaixo. Nossa equipe responderá o mais breve possível para te auxiliar.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item shadow-sm mb-3 rounded">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Posso sugerir um novo tema de aula?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Claro! Suas sugestões são muito bem-vindas. Você pode enviar suas ideias através do formulário de contato abaixo.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center my-5">
+        <h2 class="mb-4">Ainda precisa de ajuda?</h2>
+        <p class="lead">Se sua dúvida não foi respondida, entre em contato com nossa equipe de suporte.</p>
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-4 mb-3">
+            <div class="card h-100 shadow-sm p-3">
+              <div class="card-body">
+                <i class="bi bi-envelope-fill text-teal display-4"></i>
+                <h5 class="card-title mt-3">Envie um e-mail</h5>
+                <p class="card-text">Nossa equipe responderá em breve.</p>
+                <a href="mailto:ajuda@conectavo.com" class="btn btn-verde">Enviar e-mail</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card h-100 shadow-sm p-3">
+              <div class="card-body">
+                <i class="bi bi-person-heart text-teal display-4"></i>
+                <h5 class="card-title mt-3">Fale com um Neto Digital</h5>
+                <p class="card-text">Suporte personalizado e humanizado.</p>
+                <button type="button" class="btn btn-verde" data-bs-toggle="modal" data-bs-target="#modalContato">
+                  Abrir Formulário
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal fade" id="modalContato" tabindex="-1" aria-labelledby="modalContatoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="modalContatoLabel">Fale com a gente!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body form-voluntario-card">
+            <p class="text-center mb-4">Envie sua dúvida, sugestão ou feedback e um de nossos "Netos Digitais" entrará em contato.</p>
+            <form>
+              <div class="mb-3">
+                <label for="nome" class="form-label fw-semibold">Seu Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label fw-semibold">Seu E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="assunto" class="form-label fw-semibold">Assunto:</label>
+                <input type="text" class="form-control" id="assunto" name="assunto" placeholder="Ex: Dúvida sobre aula, Sugestão, Outros" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label fw-semibold">Sua Mensagem:</label>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Descreva sua dúvida ou sugestão aqui..." required></textarea>
+              </div>
+              <button type="submit" class="btn w-100 fw-semibold btn-submit-voluntario mt-3">Enviar Mensagem</button>
+            </form>
+          </div>
+        </div>
       </div>
-
-      <div class="col-md-4 text-center mb-4 mb-md-0">
-        <h5>Navegação</h5>
-        <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-center gap-3">
-          <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
-          <li><a href="sobre.html" class="text-white text-decoration-none">Sobre</a></li>
-          <li><a href="aulas.html" class="text-white text-decoration-none">Aulas</a></li>
-          <li><a href="ajuda.html" class="text-white text-decoration-none">Ajuda</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-4 text-center text-md-end">
-        <h5>Siga-nos</h5>
-        <a href="#" class="social-icon text-white me-3"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="social-icon text-white me-3"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="social-icon text-white"><i class="bi bi-twitter"></i></a>
-      </div>
-
     </div>
-    <hr class="mt-4 mb-3 border-light">
-    <div class="row">
-      <div class="col-12 text-center">
-        <p class="mb-0">Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
+
+    <footer class="bg-teal text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+            <a href="index.html" class="d-inline-block mb-3">
+              <img src="/assets/logo.png" alt="Logo Conecta Vó" height="80" />
+            </a>
+            <p class="mb-0">Tecnologia com carinho. Conectando gerações.</p>
+          </div>
+
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <h5>Navegação</h5>
+            <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-center gap-3">
+              <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
+              <li><a href="sobre.html" class="text-white text-decoration-none">Sobre</a></li>
+              <li><a href="aulas.html" class="text-white text-decoration-none">Aulas</a></li>
+              <li><a href="ajuda.html" class="text-white text-decoration-none">Ajuda</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 text-center text-md-end">
+            <h5>Siga-nos</h5>
+            <a href="https://www.facebook.com/" class="social-icon text-white me-3"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/" class="social-icon text-white me-3"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com/" class="social-icon text-white"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+        <hr class="mt-4 mb-3 border-light">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-0">Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Script da busca -->
-  <script>
-    function toggleBusca() {
-      const campo = document.getElementById('campoBusca');
-      campo.style.display = campo.style.display === 'none' ? 'block' : 'none';
-    }
+    <script>
+      function toggleBusca() {
+        const campo = document.getElementById('campoBusca');
+        campo.style.display = campo.style.display === 'none' ? 'block' : 'none';
+      }
 
-    function buscarConteudo(event) {
-      event.preventDefault();
-      const termo = event.target.querySelector('input').value;
-      alert(`Você buscou por: "${termo}"`);
-    }
-  </script>
+      function buscarConteudo(event) {
+        event.preventDefault();
+        const termo = event.target.querySelector('input').value;
+        alert(`Você buscou por: "${termo}"`);
+      }
+    </script>
 </body>
 </html>
