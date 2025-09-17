@@ -1,136 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aulas - Conecta Vó</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas - Conecta Vó</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
 
-  <!-- Fonte personalizada -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Seu CSS -->
-  <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
 
-  <!-- Barra superior -->
-  <div class="bg-light py-2 shadow-sm">
-    <div class="container d-flex justify-content-between align-items-center">
-      <span class="text-muted fw-semibold fs-5" style="margin-left: 1.2rem;">Tecnologia com carinho. Conectando gerações.</span>
-      <a href="entrar-cadastrar.html" class="me-4">
-        <button class="btn btn-outline-secondary btn-sm fs-6">Entrar / Cadastrar</button>
+    <header
+      class="header-container bg-light py-2 shadow-sm d-flex flex-wrap justify-content-between align-items-center"
+    >
+      <span class="text-muted fw-semibold fs-5 ms-5 d-none d-md-block"
+        >Tecnologia com carinho. Conectando gerações.</span
+      >
+      <a href="entrar-cadastrar.html" class="ms-auto me-5">
+        <button class="btn btn-outline-secondary btn-sm fs-6">
+          Entrar / Cadastrar
+        </button>
       </a>
-    </div>
-  </div>
+    </header>
 
-  <!-- Faixa principal -->
-  <div style="background-color: #18a5a7; padding: 5rem 0;" class="text-white shadow">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center">
-
-      <!-- Logo clicável -->
-      <div class="logo">
-        <a href="index.html">
-          <img src="../assets/logo.png" alt="Logo Conecta Vó" height="80" style="cursor: pointer;">
+    <nav class="navbar-principal shadow">
+      <div
+        class="container d-flex flex-wrap justify-content-between align-items-center"
+      >
+        <a href="index.html" class="logo">
+          <img src="/assets/logo.png" alt="Logo Conecta Vó" height="80" />
         </a>
-      </div>
 
-      <!-- Menu centralizado com fonte 28px -->
-      <nav class="flex-grow-1 d-flex justify-content-center">
-        <ul class="nav" style="font-size: 28px;">
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="sobre.html">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="aulas.html">Aula</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="ajuda.html">Ajuda</a></li>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="sobre.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="aulas.html">Aulas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold" href="ajuda.html">Ajuda</a>
+          </li>
         </ul>
-      </nav>
 
-      <!-- Botão "Seja Voluntário" + lupa com fonte 26px -->
-      <div class="d-flex align-items-center gap-3 me-3">
-        <a href="voluntario.html">
-          <button class="btn fw-semibold" style="background-color: white; color: #18a5a7; font-size: 26px;">Seja Voluntário</button>
-        </a>
-        <i class="bi bi-search text-white" style="font-size: 26px; cursor: pointer;" onclick="toggleBusca()" title="Buscar"></i>
+        <div class="botoes-acao d-flex align-items-center gap-3 me-4">
+          <a href="voluntario.html">
+            <button class="btn-voluntario">Seja Voluntário</button>
+          </a>
+          <i
+            class="bi bi-search text-white busca-icon"
+            onclick="toggleBusca()"
+            title="Buscar"
+          ></i>
+        </div>
       </div>
+    </nav>
 
+    <div id="campoBusca" class="container mt-3" style="display: none">
+      <form class="d-flex" onsubmit="buscarConteudo(event)">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Buscar conteúdo..."
+          aria-label="Buscar"
+        />
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
     </div>
-  </div>
 
-  <!-- Campo de busca oculto -->
-  <div id="campoBusca" class="container mt-3" style="display: none;">
-    <form class="d-flex" onsubmit="buscarConteudo(event)">
-      <input class="form-control me-2" type="search" placeholder="Buscar conteúdo..." aria-label="Buscar">
-      <button class="btn btn-outline-success" type="submit">Buscar</button>
-    </form>
-  </div>
+    <main class="container py-5">
+      <section class="text-center mb-5">
+        <h1 class="text-teal main-title">Biblioteca de Aulas</h1>
+        <p class="lead subtitle-lead">Explore nossos conteúdos e aprenda no seu ritmo, de forma simples e intuitiva.</p>
+      </section>
 
-  <!-- Conteúdo principal -->
-  <main class="container py-5">
-    <section class="text-center">
-      <h1>Aulas</h1>
-      <p class="lead">Explore os conteúdos disponíveis e aprenda no seu ritmo.</p>
-    </section>
-  </main>
+      <section class="mb-5">
+        <h2 class="text-center mb-4">Celular e Aplicativos</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 card-animado shadow">
+              <img src="/assets/aulas_WhatsApp_Essencial.png" class="card-img-top" alt="Aula de WhatsApp" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-teal">WhatsApp Essencial</h5>
+                <p class="card-text">Aprenda a enviar mensagens, fotos e fazer ligações para a família.</p>
+                <a href="#" class="btn btn-verde w-100">Começar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 card-animado shadow">
+              <img src="/assets/aulas_Desvendando_a_ Câmera.png" class="card-img-top" alt="Aula de Câmera do Celular" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-teal">Desvendando a Câmera</h5>
+                <p class="card-text">Tire fotos incríveis e grave vídeos de forma simples.</p>
+                <a href="#" class="btn btn-verde w-100">Começar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 card-animado shadow">
+              <img src="/assets/aulas_Google_Maps_e_ GPS.png" class="card-img-top" alt="Aula de Google Maps" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-teal">Google Maps e GPS</h5>
+                <p class="card-text">Aprenda a usar o GPS para não se perder na cidade e encontrar lugares.</p>
+                <a href="#" class="btn btn-verde w-100">Começar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- Rodapé -->
-  <footer class="bg-teal text-white py-5">
-  <div class="container">
-    <div class="row">
+      <section class="mb-5">
+        <h2 class="text-center mb-4">Internet e Navegação</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 card-animado shadow">
+              <img src="/assets/aulas_E_mail_Sem_Segredos.png" class="card-img-top" alt="Aula de E-mail" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-teal">E-mail Sem Segredos</h5>
+                <p class="card-text">Crie e-mails, envie mensagens e organize sua caixa de entrada.</p>
+                <a href="#" class="btn btn-verde w-100">Começar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 card-animado shadow">
+              <img src="/assets/aulas_Navegando_na_Internet.png" class="card-img-top" alt="Aula de Navegação na Internet" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-teal">Navegando na Internet</h5>
+                <p class="card-text">Aprenda a buscar informações e sites de forma segura.</p>
+                <a href="#" class="btn btn-verde w-100">Começar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-        <a href="index.html" class="d-inline-block mb-3">
-          <img src="assets/logo.png" alt="Logo Conecta Vó" height="80" />
-        </a>
-        <p class="mb-0">Tecnologia com carinho. Conectando gerações.</p>
+      <section class="mb-5">
+        <h2 class="text-center mb-4">Serviços Online e Finanças</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 card-animado shadow">
+              <img src="/assets/aulas_Compras_Online.png" class="card-img-top" alt="Aula de Compras Online" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-teal">Compras Online com Segurança</h5>
+                <p class="card-text">Descubra como comprar seus produtos favoritos pela internet de forma segura.</p>
+                <a href="#" class="btn btn-verde w-100">Começar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 card-animado shadow">
+              <img src="/assets/aulas_Bancos_e_PIX.png" class="card-img-top" alt="Aula de Bancos e PIX" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-teal">Bancos e PIX</h5>
+                <p class="card-text">Aprenda a usar o aplicativo do seu banco e a fazer transferências via Pix.</p>
+                <a href="#" class="btn btn-verde w-100">Começar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="bg-teal text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+            <a href="index.html" class="d-inline-block mb-3">
+              <img src="/assets/logo.png" alt="Logo Conecta Vó" height="80" />
+            </a>
+            <p class="mb-0">Tecnologia com carinho. Conectando gerações.</p>
+          </div>
+
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <h5>Navegação</h5>
+            <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-center gap-3">
+              <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
+              <li><a href="sobre.html" class="text-white text-decoration-none">Sobre</a></li>
+              <li><a href="aulas.html" class="text-white text-decoration-none">Aulas</a></li>
+              <li><a href="ajuda.html" class="text-white text-decoration-none">Ajuda</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 text-center text-md-end">
+            <h5>Siga-nos</h5>
+            <a href="https://www.facebook.com/" class="social-icon text-white me-3"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/" class="social-icon text-white me-3"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com/" class="social-icon text-white"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+        <hr class="mt-4 mb-3 border-light">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-0">Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
+          </div>
+        </div>
       </div>
+    </footer>
 
-      <div class="col-md-4 text-center mb-4 mb-md-0">
-        <h5>Navegação</h5>
-        <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-center gap-3">
-          <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
-          <li><a href="sobre.html" class="text-white text-decoration-none">Sobre</a></li>
-          <li><a href="aulas.html" class="text-white text-decoration-none">Aulas</a></li>
-          <li><a href="ajuda.html" class="text-white text-decoration-none">Ajuda</a></li>
-        </ul>
-      </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
-      <div class="col-md-4 text-center text-md-end">
-        <h5>Siga-nos</h5>
-        <a href="#" class="social-icon text-white me-3"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="social-icon text-white me-3"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="social-icon text-white"><i class="bi bi-twitter"></i></a>
-      </div>
+    <script>
+      function toggleBusca() {
+        const campo = document.getElementById('campoBusca');
+        campo.style.display = campo.style.display === 'none' ? 'block' : 'none';
+      }
 
-    </div>
-    <hr class="mt-4 mb-3 border-light">
-    <div class="row">
-      <div class="col-12 text-center">
-        <p class="mb-0">Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </div>
-</footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Script da busca -->
-  <script>
-    function toggleBusca() {
-      const campo = document.getElementById('campoBusca');
-      campo.style.display = campo.style.display === 'none' ? 'block' : 'none';
-    }
-
-    function buscarConteudo(event) {
-      event.preventDefault();
-      const termo = event.target.querySelector('input').value;
-      alert(`Você buscou por: "${termo}"`);
-    }
-  </script>
+      function buscarConteudo(event) {
+        event.preventDefault();
+        const termo = event.target.querySelector('input').value;
+        alert(`Você buscou por: "${termo}"`);
+      }
+    </script>
 </body>
 </html>
