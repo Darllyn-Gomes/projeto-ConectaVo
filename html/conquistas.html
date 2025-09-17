@@ -1,136 +1,427 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conquistas - Conecta Vó</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquistas - Conecta Vó</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-  <!-- Fonte personalizada -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Seu CSS -->
-  <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
 
-  <!-- Barra superior -->
-  <div class="bg-light py-2 shadow-sm">
-    <div class="container d-flex justify-content-between align-items-center">
-      <span class="text-muted fw-semibold fs-5" style="margin-left: 1.2rem;">Tecnologia com carinho. Conectando gerações.</span>
-      <a href="entrar-cadastrar.html" class="me-4">
-        <button class="btn btn-outline-secondary btn-sm fs-6">Entrar / Cadastrar</button>
-      </a>
+    <div class="bg-light py-2 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="text-muted fw-semibold fs-5" style="margin-left: 1.2rem;">Tecnologia com carinho. Conectando gerações.</span>
+            <a href="entrar-cadastrar.html" class="me-4">
+                <button class="btn btn-outline-secondary btn-sm fs-6">Entrar / Cadastrar</button>
+            </a>
+        </div>
     </div>
-  </div>
 
-  <!-- Faixa principal -->
-  <div style="background-color: #18a5a7; padding: 5rem 0;" class="text-white shadow">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <div style="background-color: #18a5a7; padding: 5rem 0;" class="text-white shadow">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
 
-      <!-- Logo -->
-      <div class="logo">
-        <a href="index.html">
-          <img src="../assets/logo.png" alt="Logo Conecta Vó" height="80" style="cursor: pointer;">
-        </a>
-      </div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../assets/logo.png" alt="Logo Conecta Vó" height="80" style="cursor: pointer;">
+                </a>
+            </div>
 
-      <!-- Menu -->
-      <nav class="flex-grow-1 d-flex justify-content-center">
-        <ul class="nav" style="font-size: 28px;">
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="sobre.html">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="aulas.html">Aula</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="ajuda.html">Ajuda</a></li>
-        </ul>
-      </nav>
+            <nav class="flex-grow-1 d-flex justify-content-center">
+                <ul class="nav" style="font-size: 28px;">
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold" href="sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold" href="aulas.html">Aula</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold" href="ajuda.html">Ajuda</a></li>
+                </ul>
+            </nav>
 
-      <!-- Botão "Seja Voluntário" + lupa com fonte 26px -->
-      <div class="d-flex align-items-center gap-3 me-3">
-        <a href="voluntario.html">
-          <button class="btn fw-semibold" style="background-color: white; color: #18a5a7; font-size: 26px;">Seja Voluntário</button>
-        </a>
-        <i class="bi bi-search text-white" style="font-size: 26px; cursor: pointer;" onclick="toggleBusca()" title="Buscar"></i>
-      </div>
+            <div class="d-flex align-items-center gap-3 me-3">
+                <a href="voluntario.html">
+                    <button class="btn fw-semibold" style="background-color: white; color: #18a5a7; font-size: 26px;">Seja Voluntário</button>
+                </a>
+                <i class="bi bi-search text-white" style="font-size: 26px; cursor: pointer;" onclick="toggleBusca()" title="Buscar"></i>
+            </div>
 
+        </div>
     </div>
-  </div>
 
-  <!-- Campo de busca oculto -->
-  <div id="campoBusca" class="container mt-3" style="display: none;">
-    <form class="d-flex" onsubmit="buscarConteudo(event)">
-      <input class="form-control me-2" type="search" placeholder="Buscar conteúdo..." aria-label="Buscar">
-      <button class="btn btn-outline-success" type="submit">Buscar</button>
-    </form>
-  </div>
-
-  <!-- Conteúdo principal -->
-  <main class="container py-5">
-    <section class="text-center">
-      <h1>Conquistas</h1>
-      <p class="lead">Acompanhe os marcos que você já alcançou e celebre cada passo da sua jornada.</p>
-    </section>
-  </main>
-
-  <!-- Rodapé -->
-  <footer class="bg-teal text-white py-5">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-        <a href="index.html" class="d-inline-block mb-3">
-          <img src="assets/logo.png" alt="Logo Conecta Vó" height="80" />
-        </a>
-        <p class="mb-0">Tecnologia com carinho. Conectando gerações.</p>
-      </div>
-
-      <div class="col-md-4 text-center mb-4 mb-md-0">
-        <h5>Navegação</h5>
-        <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-center gap-3">
-          <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
-          <li><a href="sobre.html" class="text-white text-decoration-none">Sobre</a></li>
-          <li><a href="aulas.html" class="text-white text-decoration-none">Aulas</a></li>
-          <li><a href="ajuda.html" class="text-white text-decoration-none">Ajuda</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-4 text-center text-md-end">
-        <h5>Siga-nos</h5>
-        <a href="#" class="social-icon text-white me-3"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="social-icon text-white me-3"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="social-icon text-white"><i class="bi bi-twitter"></i></a>
-      </div>
-
+    <div id="campoBusca" class="container mt-3" style="display: none;">
+        <form class="d-flex" onsubmit="buscarConteudo(event)">
+            <input class="form-control me-2" type="search" placeholder="Buscar conteúdo..." aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
     </div>
-    <hr class="mt-4 mb-3 border-light">
-    <div class="row">
-      <div class="col-12 text-center">
-        <p class="mb-0">Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
-      </div>
+
+    <main class="container py-5">
+        <section class="text-center mb-5">
+            <h1>Conquistas e Recompensas</h1>
+            <p class="lead">Acompanhe seu progresso, celebre suas conquistas e resgate prêmios especiais.</p>
+        </section>
+
+        <section class="mb-5">
+            <div class="card p-4 text-center">
+                <div class="d-flex justify-content-center align-items-center">
+                    <i class="bi bi-star-fill text-warning me-2" style="font-size: 2rem;"></i>
+                    <h2 class="mb-0">Sua Pontuação: <span class="text-teal">500</span></h2>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalPontuacao" class="ms-2">
+                        <i class="bi bi-info-circle text-muted" style="font-size: 1.5rem; cursor: pointer;" title="Entenda como funciona a pontuação"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3 class="text-center mb-4">Suas Medalhas</h3>
+
+            <div id="mensagemMedalhas" class="text-center p-4">
+                <p class="lead">Parece que você ainda não conquistou nenhuma medalha! Continue explorando e aprendendo para desbloquear sua primeira conquista.</p>
+                <button id="btnMostrarMedalhas" class="btn btn-verde mt-3">Visualizar Todas as Medalhas</button>
+            </div>
+
+            <div id="secaoMedalhas" style="display: none;">
+
+                <h4 class="text-center mb-3 text-success">Medalhas Fáceis</h4>
+                <div class="row g-4 justify-content-center mb-5">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_Primeiro_Login.png" download="medalha_primeiro_login.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Primeiro Login" data-pontos="50"
+                                data-requisito="Basta acessar a plataforma e realizar seu primeiro login para ganhar essa medalha.">
+                                <img src="/assets/conquista_Primeiro_Login.png" alt="Medalha Primeiro Login" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Primeiro Login</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_primeiro_comentario.png" download="medalha_primeiro_comentario.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Primeiro Comentário" data-pontos="50"
+                                data-requisito="Deixe seu primeiro comentário em qualquer aula ou postagem da comunidade para mostrar que você está interagindo.">
+                                <img src="/assets/conquista_primeiro_comentario.png" alt="Medalha Primeiro Comentário" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Primeiro Comentário</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_primeiro_contato.png" download="medalha_primeiro_contato.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Primeiro Contato" data-pontos="50"
+                                data-requisito="Envie sua primeira mensagem para um voluntário ou outro usuário da plataforma.">
+                                <img src="/assets/conquista_primeiro_contato.png" alt="Medalha Primeiro Contato" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Primeiro Contato</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_Explorador_do_Conhecimento.png" download="medalha_explorador_conhecimento.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Explorador do Conhecimento" data-pontos="50"
+                                data-requisito="Conclua a sua primeira aula de introdução à tecnologia.">
+                                <img src="/assets/conquista_Explorador_do_Conhecimento.png" alt="Medalha Explorador do Conhecimento" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Explorador do Conhecimento</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_Aventureiro_do_Telefone.png" download="medalha_aventureiro_telefone.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Aventureiro do Telefone" data-pontos="50"
+                                data-requisito="Finalize a aula sobre como usar o telefone para realizar chamadas e mensagens.">
+                                <img src="/assets/conquista_Aventureiro_do_Telefone.png" alt="Medalha Aventureiro do Telefone" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Aventureiro do Telefone</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <h4 class="text-center mb-3 text-info">Medalhas Médias</h4>
+                <div class="row g-4 justify-content-center mb-5">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_esxplorador_web.png" download="medalha_explorador_web.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Explorador da Web" data-pontos="150"
+                                data-requisito="Navegue por 5 sites diferentes, incluindo um site de notícias e um de receitas.">
+                                <img src="/assets/conquista_esxplorador_web.png" alt="Medalha Explorador da Web" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Explorador da Web</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_Guardião_da_Segurança.png" download="medalha_guardiao_seguranca.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Guardião da Segurança" data-pontos="150"
+                                data-requisito="Complete o curso sobre segurança online e privacidade de dados para proteger suas informações.">
+                                <img src="/assets/conquista_Guardião_da_Segurança.png" alt="Medalha Guardião da Segurança" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Guardião da Segurança</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_Amigo_ da_Tecnologia.png" download="medalha_amigo_tecnologia.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Amigo da Tecnologia" data-pontos="150"
+                                data-requisito="Responda a 3 perguntas de outros usuários ou voluntários na seção de ajuda.">
+                                <img src="/assets/conquista_Amigo_ da_Tecnologia.png" alt="Medalha Amigo da Tecnologia" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Amigo da Tecnologia</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_ouvinte_ativo.png" download="medalha_ouvinte_ativo.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Ouvinte Ativo" data-pontos="150"
+                                data-requisito="Assista a 5 aulas completas sobre diferentes tópicos.">
+                                <img src="/assets/conquista_ouvinte_ativo.png" alt="Medalha Ouvinte Ativo" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Ouvinte Ativo</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <h4 class="text-center mb-3 text-warning">Medalhas Difíceis</h4>
+                <div class="row g-4 justify-content-center mb-5">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_mestre_das_compras.png" download="medalha_mestre_compras.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Mestre das Compras" data-pontos="500"
+                                data-requisito="Conclua a aula sobre compras online e faça sua primeira compra segura.">
+                                <img src="/assets/conquista_mestre_das_compras.png" alt="Medalha Mestre das Compras" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Mestre das Compras</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_Conect_ado com_a_Família.png" download="medalha_conectado_familia.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Conectado com a Família" data-pontos="500"
+                                data-requisito="Realize uma chamada de vídeo com um familiar ou amigo usando um aplicativo de mensagens.">
+                                <img src="/assets/conquista_Conect_ado com_a_Família.png" alt="Medalha Conectado com a Família" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Conectado com a Família</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquistas_guru_telefone.png" download="medalha_guru_telefone.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Guru do Telefone" data-pontos="500"
+                                data-requisito="Domine as funções avançadas do smartphone, como gerenciar aplicativos e organizar fotos.">
+                                <img src="/assets/conquistas_guru_telefone.png" alt="Medalha Guru do Telefone" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Guru do Telefone</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_Conectado_ com_o_Mundo.png" download="medalha_conectado_mundo.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Conectado com o Mundo" data-pontos="500"
+                                data-requisito="Assine um boletim informativo de notícias ou siga um perfil de interesse nas redes sociais.">
+                                <img src="/assets/conquista_Conectado_ com_o_Mundo.png" alt="Medalha Conectado com o Mundo" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Conectado com o Mundo</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_Criador de_Conteúdo.png" download="medalha_criador_conteudo.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Criador de Conteúdo" data-pontos="500"
+                                data-requisito="Publique sua primeira receita, história ou foto na comunidade.">
+                                <img src="/assets/conquista_Criador de_Conteúdo.png" alt="Medalha Criador de Conteúdo" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Criador de Conteúdo</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_Mestre_da_ Videochamada.png" download="medalha_mestre_videochamada.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Mestre da Videochamada" data-pontos="500"
+                                data-requisito="Participe de 3 videochamadas em grupo com amigos ou familiares.">
+                                <img src="/assets/conquista_Mestre_da_ Videochamada.png" alt="Medalha Mestre da Videochamada" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Mestre da Videochamada</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <h4 class="text-center mb-3 text-danger">Medalha Ápice</h4>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <a href="/assets/conquista_guardiao_conexao.png" download="medalha_guardiao_conexao.png">
+                            <div class="conquista-medalha bloqueada text-center" data-bs-toggle="modal" data-bs-target="#modalConquista"
+                                data-conquista="Guardião da Conexão" data-pontos="2000"
+                                data-requisito="Conquiste todas as medalhas das categorias Fácil, Média e Difícil.">
+                                <img src="/assets/conquista_guardiao_conexao.png" alt="Medalha Guardião da Conexão" class="img-fluid conquista-icon">
+                                <p class="conquista-nome">Guardião da Conexão</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3 class="text-center mb-4">Troque seus Pontos</h3>
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 text-center p-3">
+                        <div class="card-body">
+                            <i class="bi bi-gift" style="font-size: 3rem; color: #18a5a7;"></i>
+                            <h5 class="card-title mt-3">Aula Particular Gratuita</h5>
+                            <p class="card-text">Troque 500 pontos por uma aula extra.</p>
+                            <button class="btn btn-verde w-100">Resgatar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 text-center p-3">
+                        <div class="card-body">
+                            <i class="bi bi-trophy" style="font-size: 3rem; color: #18a5a7;"></i>
+                            <h5 class="card-title mt-3">Selo de Mestre Conecta</h5>
+                            <p class="card-text">Troque 1000 pontos por um selo especial.</p>
+                            <button class="btn btn-verde w-100">Resgatar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-teal text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <img src="../assets/logo.png" alt="Logo Conecta Vó" height="80" />
+                    </a>
+                    <p class="mb-0">Tecnologia com carinho. Conectando gerações.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <h5>Navegação</h5>
+                    <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-center gap-3">
+                        <li><a href="index.html" class="text-white text-decoration-none">Início</a></li>
+                        <li><a href="sobre.html" class="text-white text-decoration-none">Sobre</a></li>
+                        <li><a href="aulas.html" class="text-white text-decoration-none">Aulas</a></li>
+                        <li><a href="ajuda.html" class="text-white text-decoration-none">Ajuda</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <h5>Siga-nos</h5>
+                    <a href="#" class="social-icon text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-icon text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-icon text-white"><i class="bi bi-twitter"></i></a>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 border-light">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">Copyright © 2025 Conecta Vó. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modalConquista" tabindex="-1" aria-labelledby="modalConquistaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="bi bi-award" style="font-size: 4rem; color: #18a5a7;"></i>
+                    <h4 class="mt-3" id="modalConquistaTitulo">Conquista Desbloqueada!</h4>
+                    <h6 class="text-muted" id="modalConquistaPontos"></h6>
+                    <p class="lead" id="modalConquistaDescricao"></p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</footer>
+    
+    <div class="modal fade" id="modalPontuacao" tabindex="-1" aria-labelledby="modalPontuacaoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title" id="modalPontuacaoLabel">Como Funciona a Pontuação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Cada conquista que você desbloqueia concede uma quantidade de pontos, que varia de acordo com o nível de dificuldade da atividade:</p>
+                    <ul class="list-unstyled">
+                        <li><span class="fw-bold text-success">Missões Fáceis:</span> 50 pontos</li>
+                        <li><span class="fw-bold text-info">Missões Médias:</span> 150 pontos</li>
+                        <li><span class="fw-bold text-warning">Missões Difíceis:</span> 500 pontos</li>
+                        <li><span class="fw-bold text-danger">Medalha Ápice:</span> 2000 pontos</li>
+                    </ul>
+                    <p class="mb-0 mt-3">Quanto mais você aprende e interage, mais pontos você ganha!</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Script da busca -->
-  <script>
-    function toggleBusca() {
-      const campo = document.getElementById('campoBusca');
-      campo.style.display = campo.style.display === 'none' ? 'block' : 'none';
-    }
+    <script>
+        function toggleBusca() {
+            const campo = document.getElementById('campoBusca');
+            campo.style.display = campo.style.display === 'none' ? 'block' : 'none';
+        }
 
-    function buscarConteudo(event) {
-      event.preventDefault();
-      const termo = event.target.querySelector('input').value;
-      alert(`Você buscou por: "${termo}"`);
-    }
-  </script>
+        function buscarConteudo(event) {
+            event.preventDefault();
+            const termo = event.target.querySelector('input').value;
+            alert(`Você buscou por: "${termo}"`);
+        }
+
+        // Script para a lógica das medalhas
+        document.getElementById('btnMostrarMedalhas').addEventListener('click', function() {
+            // Oculta a mensagem e o botão
+            document.getElementById('mensagemMedalhas').style.display = 'none';
+            
+            // Exibe a seção de medalhas
+            document.getElementById('secaoMedalhas').style.display = 'flex';
+        });
+
+        // Lógica para simular a conquista de uma medalha
+        // No seu sistema real, isso seria ativado após uma missão ser completada.
+        function desbloquearMedalha(nomeDaMedalha) {
+            const medalhas = document.querySelectorAll('.conquista-medalha');
+            medalhas.forEach(medalha => {
+                if (medalha.getAttribute('data-conquista') === nomeDaMedalha) {
+                    const link = medalha.closest('a');
+                    if (link) {
+                        link.classList.remove('bloqueada');
+                        link.classList.add('conquistada');
+                    }
+                    medalha.classList.remove('bloqueada');
+                    medalha.classList.add('conquistada');
+                }
+            });
+        }
+
+        // Lógica para preencher o modal com os dados da medalha clicada
+        const modalConquista = document.getElementById('modalConquista');
+        modalConquista.addEventListener('show.bs.modal', event => {
+            const medalhaDiv = event.relatedTarget.querySelector('.conquista-medalha');
+            
+            if (medalhaDiv) {
+                const nome = medalhaDiv.getAttribute('data-conquista');
+                const pontos = medalhaDiv.getAttribute('data-pontos');
+                const requisito = medalhaDiv.getAttribute('data-requisito');
+                
+                const tituloModal = modalConquista.querySelector('#modalConquistaTitulo');
+                const pontosModal = modalConquista.querySelector('#modalConquistaPontos');
+                const descricaoModal = modalConquista.querySelector('#modalConquistaDescricao');
+                
+                tituloModal.textContent = nome;
+                pontosModal.textContent = `Pontos: ${pontos}`;
+                descricaoModal.textContent = requisito;
+            }
+        });
+    </script>
 </body>
 </html>

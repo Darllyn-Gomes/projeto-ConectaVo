@@ -5,14 +5,14 @@
 */
 
 /* Importação de Fontes e Variáveis Globais */
-@import url('https://fonts.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root {
     /* Cores */
     --teal-primary: #18a5a7; /* Cor principal, um verde-água vibrante */
     --teal-dark: #148c8e;    /* Um tom mais escuro para hover */
     --gold-accent: #ffd700;  /* Dourado para detalhes */
-    --bg-light: #f8f9fa;     /* Cor de fundo clara do Bootstrap */
+    --bg-light: #f8f9fa;    /* Cor de fundo clara do Bootstrap */
     --text-color: #343a40;   /* Cor de texto padrão (cinza escuro) */
     --card-bg: #ffffff;      /* Cor de fundo de cards */
     --border-radius: 10px;
@@ -42,7 +42,7 @@ body {
 h1, h2, h3 {
     margin-bottom: 1rem;
     font-weight: 600;
-    color: var(--teal-primary); /* Usando a variável */
+    color: var(--teal-primary);
 }
 
 h1 { font-size: 3rem; }
@@ -73,7 +73,7 @@ p { font-size: 1.1rem; }
 
 .navbar-principal {
     background-color: var(--teal-primary);
-    padding: 5rem 0; /* AJUSTE FEITO AQUI */
+    padding: 5rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -94,7 +94,7 @@ p { font-size: 1.1rem; }
 
 .navbar-principal .nav-link {
     color: white;
-    font-size: 1.75rem; /* Ajustado para melhor proporção */
+    font-size: 1.75rem;
     font-weight: 600;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -117,7 +117,7 @@ p { font-size: 1.1rem; }
     border: 1px solid var(--teal-primary);
     padding: 8px 20px;
     border-radius: 5px;
-    font-size: 1.625rem; /* Ajuste para o tamanho original */
+    font-size: 1.625rem;
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -130,7 +130,7 @@ p { font-size: 1.1rem; }
 }
 
 .busca-icon {
-    font-size: 1.625rem; /* Ajuste para o tamanho original */
+    font-size: 1.625rem;
     cursor: pointer;
     transition: color 0.3s ease;
 }
@@ -252,17 +252,16 @@ section {
     color: var(--text-color);
 }
 
-/* Estilos do Rodapé (Footer) */
+/* Estilos para o Rodapé */
 footer {
     background-color: var(--teal-primary);
     color: var(--card-bg);
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
+    padding: 5rem 0; /* Alinhando com o cabeçalho */
 }
 
 footer a {
     color: white;
+    text-decoration: none;
 }
 
 footer a:hover {
@@ -271,11 +270,11 @@ footer a:hover {
 
 .social-icon {
     font-size: 1.5rem;
-    transition: color 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .social-icon:hover {
-    color: var(--gold-accent) !important;
+    transform: translateY(-2px);
 }
 
 /* Design Responsivo */
@@ -332,7 +331,7 @@ footer a:hover {
 }
 
 .btn-download {
-    background-color: #f7d560; /* Cor amarela */
+    background-color: #f7d560;
     color: #333;
     border: none;
 }
@@ -354,4 +353,94 @@ footer a:hover {
 .video-card-miniatura .col-5 {
     flex: 0 0 41.666667%;
     max-width: 41.666667%;
+}
+
+/* Estilos para a página de Conquistas */
+.conquista-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: default;
+}
+
+.conquista-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conquista-icon {
+    font-size: 4rem;
+    color: #18a5a7;
+}
+
+/* Estilos para conquistas bloqueadas */
+.conquista-card.bloqueada {
+    opacity: 0.6;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.conquista-card.bloqueada .conquista-icon {
+    color: #6c757d;
+}
+
+/* Estilos da Página de Conquistas */
+/* ----- Seção de Pontuação ----- */
+.text-teal {
+    color: #18a5a7;
+}
+
+/* ----- Seção de Medalhas ----- */
+.conquista-medalha {
+    width: 150px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border-radius: 50%; /* Faz o card ser um círculo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.conquista-medalha:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.conquista-icon {
+    font-size: 3rem;
+    color: #a0a0a0;
+}
+
+.conquista-nome {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 5px;
+    color: #333;
+}
+
+/* Estado de Conquista Alcançada */
+.conquista-medalha.conquistada {
+    background-color: #e6f7f8;
+    border-color: #18a5a7;
+    cursor: pointer;
+}
+.conquista-medalha.conquistada .conquista-icon {
+    color: #18a5a7;
+}
+
+/* Estado de Conquista Bloqueada */
+.conquista-medalha.bloqueada {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.conquista-medalha.bloqueada .conquista-icon {
+    color: #a0a0a0;
 }
