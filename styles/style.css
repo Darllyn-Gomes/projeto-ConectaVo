@@ -1,124 +1,44 @@
-/* Importação da fonte para o site */
+/*
+    -------------------------------------------
+    Arquivo de Estilo Principal - Conecta Vó
+    -------------------------------------------
+*/
+
+/* Importação de Fontes e Variáveis Globais */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Regras de Acessibilidade e Design */
 :root {
-    --cor-principal: #008080; /* Um tom de verde-água */
-    --cor-secundaria: #FFD700; /* Dourado */
-    --cor-fundo: #F5F5F5; /* Cinza claro */
-    --cor-texto: #333; /* Cinza escuro */
-    --cor-card-fundo: #FFFFFF; /* Branco */
-    --fonte-principal: 'Poppins', sans-serif;
-    --borda-arredondada: 10px;
+  --cor-principal: #008080;
+  --cor-secundaria: #ffd700;
+  --cor-fundo: #f5f5f5;
+  --cor-texto: #333;
+  --cor-card-fundo: #ffffff;
+  --fonte-principal: 'Poppins', sans-serif;
+  --borda-arredondada: 10px;
 }
 
+/* Estilos Gerais e Reset */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    font-family: var(--fonte-principal);
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    line-height: 1.6;
-}
-
-/* Estilos do Cabeçalho */
-header {
-    background-color: var(--cor-principal);
-    color: var(--cor-card-fundo);
-    padding: 1.5rem 2rem; /* Aumentado o padding */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.container-cabecalho {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    height: 40px; 
-}
-
-.menu-principal ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.menu-principal a {
-    color: var(--cor-card-fundo);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.5rem; /* Adicionado padding para facilitar o clique */
-    transition: color 0.3s;
-}
-
-.menu-principal a:hover {
-    color: var(--cor-secundaria);
-}
-
-.botoes-cabecalho a {
-    text-decoration: none;
-}
-
-.botoes-cabecalho button {
-    padding: 0.75rem 1.25rem; /* Aumentado o tamanho dos botões */
-    border-radius: var(--borda-arredondada);
-    border: 2px solid var(--cor-card-fundo);
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.botao-voluntario {
-    background-color: transparent;
-    color: var(--cor-card-fundo);
-}
-.botao-voluntario:hover {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-principal);
-    border-color: var(--cor-secundaria);
-}
-
-.botao-login {
-    background-color: var(--cor-card-fundo);
-    color: var(--cor-principal);
-    margin-left: 1rem;
-}
-.botao-login:hover {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-principal);
-}
-
-/* Estilos Gerais de Conteúdo */
-main {
-    padding: 3rem 2rem; /* Padding maior para o conteúdo */
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-section {
-    margin-bottom: 4rem; /* Maior espaçamento entre as seções */
-    text-align: center;
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
-    margin-bottom: 1rem;
-    font-weight: 600;
-    color: var(--cor-principal);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--cor-principal);
 }
 
 h1 { font-size: 3rem; }
@@ -126,375 +46,286 @@ h2 { font-size: 2.5rem; }
 h3 { font-size: 1.8rem; }
 p { font-size: 1.1rem; }
 
-/* Seção de Slogan/Banner */
-.secao-slogan {
-    background-color: var(--cor-principal);
-    color: white;
-    padding: 5rem 2rem;
-    border-radius: var(--borda-arredondada);
-    text-align: center;
-    background-image: url('caminho/para/o/banner.png'); /* Adicione sua imagem aqui */
-    background-size: cover;
-    background-position: center;
-}
-.secao-slogan h1 { color: white; }
-.secao-slogan p { color: white; margin-bottom: 2rem; }
-
-.botao-quero-aprender {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-}
-.botao-quero-aprender:hover {
-    transform: translateY(-3px);
+section {
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
-/* Estilos para a Seção de Atalhos */
-.secao-atalhos {
-    padding: 2rem 0;
-}
-.container-atalhos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-.atalho-link {
-    text-decoration: none;
-    color: var(--cor-texto);
-}
-.atalho {
-    background-color: var(--cor-card-fundo);
-    padding: 2.5rem;
-    border-radius: var(--borda-arredondada);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 280px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.atalho:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-.atalho img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 1.5rem;
-}
-.atalho h3 { color: var(--cor-principal); }
-.botao-comecar {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-    border: none;
-    padding: 0.8rem 1.8rem;
-    border-radius: var(--borda-arredondada);
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.3s;
-}
-.botao-comecar:hover {
-    background-color: #FFC107;
+/* Estilos do Cabeçalho e Navegação */
+.header-container {
+  background-color: #f8f9fa;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Estilos para a Seção de Histórias de Sucesso */
-.secao-historias {
-    background-color: #f1f1f1;
-    padding: 4rem 2rem;
-    border-radius: var(--borda-arredondada);
-}
-.container-historias {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-.historia {
-    background-color: var(--cor-card-fundo);
-    padding: 2rem;
-    border-radius: var(--borda-arredondada);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 280px;
-    text-align: center;
-    font-style: italic;
-}
-.foto-placeholder {
-    width: 100px;
-    height: 100px;
-    background-color: var(--cor-principal);
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-}
-.historia h3 {
-    margin-bottom: 0.5rem;
-}
-.historia p {
-    font-size: 1rem;
-    color: #555;
+.navbar-principal {
+  background-color: #18a5a7;
+  padding: 5rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos do Rodapé */
-footer {
-    background-color: var(--cor-principal);
-    color: var(--cor-card-fundo);
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
+.navbar-principal .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Design Responsivo para Telas Pequenas */
-@media (max-width: 768px) {
-    .container-cabecalho {
-        flex-direction: column;
-        text-align: center;
-    }
-    .menu-principal ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin: 1rem 0;
-    }
-    .botoes-cabecalho {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-    .botoes-cabecalho button {
-        width: 100%;
-        margin-left: 0;
-    }
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
-    h3 { font-size: 1.25rem; }
-    .secao-slogan { padding: 3rem 1rem; }
-    .secao-atalhos .atalho { width: 100%; }
-    .secao-historias .historia { width: 100%; }
+.navbar-principal .logo {
+  flex-grow: 0;
 }
 
-/* Estilos Específicos para a Página de Cadastro */
+.navbar-principal .nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-principal .nav-link {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-principal .nav-link:hover {
+  color: var(--cor-secundaria);
+}
+
+.botoes-acao {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-voluntario {
+  background-color: white;
+  color: #18a5a7;
+  font-size: 1.625rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.btn-voluntario:hover {
+  background-color: #f1f1f1;
+  color: #138f91;
+}
+
+.busca-icon {
+  font-size: 1.625rem;
+  cursor: pointer;
+}
+
+/* Estilos do Conteúdo Principal (Main) */
+main {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Carrossel */
+.carousel-item {
+  height: 700px;
+  background-color: #f5f5f5;
+}
+
+.carousel-item .carousel-image {
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Seção de Atalhos (Cards) */
+.card-animado {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-animado:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  color: #18a5a7;
+  font-weight: 700;
+}
+
+.card-text {}
+
+.btn-verde {
+  background-color: #18a5a7;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-verde:hover {
+  background-color: #138f91;
+  color: white;
+}
+
+/* Estilos de Formulário (Cadastro e Voluntário) */
 .container-principal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh; /* Altura mínima para centralizar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
 }
 
-.secao-formulario {
-    background-color: var(--cor-card-fundo);
-    padding: 2.5rem;
-    border-radius: var(--borda-arredondada);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-    text-align: left;
+.secao-formulario, .secao-voluntario {
+  background-color: var(--cor-card-fundo);
+  padding: 2.5rem;
+  border-radius: var(--borda-arredondada);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
 }
 
-.secao-formulario h2 {
-    text-align: center;
-    color: var(--cor-principal);
-    margin-bottom: 0.5rem;
+.secao-formulario h2, .secao-voluntario h2 {
+  text-align: center;
+  color: var(--cor-principal);
+  margin-bottom: 0.5rem;
 }
 
-.secao-formulario p {
-    text-align: center;
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 2rem;
-}
-
-.campo-form {
-    margin-bottom: 1.5rem;
-}
-
-.campo-form label {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--cor-principal);
-}
-
-.campo-form input,
-.campo-form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 2px solid #ddd;
-    border-radius: var(--borda-arredondada);
-    font-size: 1rem;
-    font-family: var(--fonte-principal);
-}
-
-.campo-form input:focus,
-.campo-form textarea:focus {
-    outline: none;
-    border-color: var(--cor-principal);
-}
-
-.botao-enviar {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-    border: none;
-    width: 100%;
-    padding: 1rem;
-    border-radius: var(--borda-arredondada);
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.botao-enviar:hover {
-    background-color: #FFC107;
-}
-
-/* Garante que o botão de login no cabeçalho leve para a nova página */
-.botao-login {
-    background-color: var(--cor-card-fundo);
-    color: var(--cor-principal);
-    margin-left: 1rem;
-}
-
-@media (max-width: 768px) {
-    .secao-formulario {
-        padding: 1.5rem;
-        margin: 2rem 1rem;
-    }
-}
-
-/* Classes para alternar formulários */
-.oculto {
-    display: none;
-}
-
-/* Estilos Específicos para a Página de Voluntário */
-.secao-voluntario {
-    padding: 3rem 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: var(--cor-card-fundo);
-    border-radius: var(--borda-arredondada);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.secao-voluntario h2 {
-    text-align: center;
-    color: var(--cor-principal);
-    margin-bottom: 0.5rem;
-}
-
-.secao-voluntario p {
-    text-align: center;
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 2rem;
+.secao-formulario p, .secao-voluntario p {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
 }
 
 .campo-form {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .campo-form label {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--cor-principal);
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--cor-principal);
 }
 
 .campo-form input,
-.campo-form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 2px solid #ddd;
-    border-radius: var(--borda-arredondada);
-    font-size: 1rem;
-    font-family: var(--fonte-principal);
+.campo-form textarea,
+.campo-form select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: var(--borda-arredondada);
+  font-size: 1rem;
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-card-fundo);
+  cursor: pointer;
 }
 
 .campo-form input:focus,
-.campo-form textarea:focus {
-    outline: none;
-    border-color: var(--cor-principal);
+.campo-form textarea:focus,
+.campo-form select:focus {
+  outline: none;
+  border-color: var(--cor-principal);
+}
+
+.campo-form textarea {
+  resize: vertical;
 }
 
 .campo-form-checkbox {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .campo-form-checkbox input[type="checkbox"] {
-    width: auto;
-    margin-right: 0.5rem;
+  width: auto;
+  margin-right: 0.5rem;
 }
 
 .botao-enviar {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-    border: none;
-    width: 100%;
-    padding: 1rem;
-    border-radius: var(--borda-arredondada);
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--borda-arredondada);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .botao-enviar:hover {
-    background-color: #FFC107;
+  background-color: #ffc107;
 }
 
+.oculto {
+  display: none;
+}
+
+/* Estilos do Rodapé (Footer) */
+footer {
+  background-color: var(--cor-principal);
+  color: var(--cor-card-fundo);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Design Responsivo (Mobile First) */
 @media (max-width: 768px) {
-    .secao-voluntario {
-        padding: 1.5rem;
-    }
-}
-
-/* Estilos para o campo Select */
-.campo-form select {
+  .container-cabecalho {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu-principal ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  .botoes-cabecalho {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
-    padding: 0.8rem;
-    border: 2px solid #ddd;
-    border-radius: var(--borda-arredondada);
-    font-size: 1rem;
-    font-family: var(--fonte-principal);
-    background-color: var(--cor-card-fundo); /* Adiciona fundo branco para consistência */
-    cursor: pointer;
-}
-
-.campo-form select:focus {
-    outline: none;
-    border-color: var(--cor-principal);
-}
-
-/* Garante que o campo de texto de múltiplas linhas (textarea) também tenha o mesmo estilo */
-.campo-form textarea {
-    resize: vertical; /* Permite que o usuário redimensione verticalmente */
-}
-
-.campo-form textarea:focus {
-    outline: none;
-    border-color: var(--cor-principal);
-}
-
-/* Estilos personalizados Bootstrap */
-.bg-teal {
-  background-color: #008080;
-}
-
-.text-teal {
-  color: #008080;
-}
-
-.carrossel-ajustado {
-  margin-top: -1.5rem; /* sobe o carrossel suavemente */
+  }
+  .botoes-cabecalho button {
+    width: 100%;
+    margin-left: 0;
+  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  .secao-slogan { padding: 3rem 1rem; }
+  .secao-atalhos .atalho { width: 100%; }
+  .secao-historias .historia { width: 100%; }
+  .secao-formulario, .secao-voluntario {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
 }
