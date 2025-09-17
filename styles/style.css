@@ -310,3 +310,48 @@ footer a:hover {
 .oculto {
     display: none;
 }
+
+/* Estilos da página de videochamada */
+.btn-acao {
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-acao:hover {
+    transform: translateY(-2px);
+}
+
+.btn-gostei {
+    color: #18a5a7;
+    background-color: transparent;
+    border: 1px solid #18a5a7;
+}
+.btn-gostei:hover {
+    background-color: #18a5a7;
+    color: white;
+}
+
+.btn-download {
+    background-color: #f7d560; /* Cor amarela */
+    color: #333;
+    border: none;
+}
+.btn-download:hover {
+    background-color: #e5c5a0;
+}
+
+.video-card-miniatura {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.video-card-miniatura:hover {
+    transform: scale(1.02);
+}
+
+.video-card-miniatura .col-5 {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}
